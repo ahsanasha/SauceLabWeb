@@ -43,17 +43,5 @@ For example, we have two scenario outlines: Login with a valid credential and lo
 You can define the location of a step definitions for Cucumber by using CucumberKW.GLUE = ['package1', 'package2']. The default value of CucumberKW.GLUE = [''] is all packages, which means the test engine takes time to scan all the packages. Defining specific locations narrows down the packages to find the steps definitions before executing feature files; hence, reducing the execution time.
 We recommend putting the script of directing to a package in a test listener.
 
-`import com.kms.katalon.core.annotation.AfterTestCase`
-`import com.kms.katalon.core.annotation.BeforeTestCase`
-`import com.kms.katalon.core.context.TestCaseContext`
-`import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW`
-
-`class NewTestListener {`
-    `@BeforeTestCase`
-   ` def sampleBeforeTestCase(TestCaseContext testCaseContext) {`
-        `CucumberKW.GLUE = ['package1', 'package2']`
-    `}`
-`}`
-
 ### Run a Feature File
 Katalon Studio allows you to run the feature file instantly by itself to make sure it works properly. To do so, open the desired Features file, then click the Run button on the main toolbar.
